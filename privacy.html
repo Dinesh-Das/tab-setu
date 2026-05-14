@@ -1,223 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Tab Setu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #6366f1;
-            --primary-glow: rgba(99, 102, 241, 0.5);
-            --bg: #030712;
-            --card-bg: rgba(17, 24, 39, 0.7);
-            --text: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border: rgba(255, 255, 255, 0.1);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Tab Setu</title>
+  <style>
+    :root {
+      --primary: #6366f1;
+      --bg: #030712;
+      --card-bg: rgba(17, 24, 39, 0.78);
+      --surface: rgba(255, 255, 255, 0.035);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border: rgba(255, 255, 255, 0.1);
+      --accent-border: rgba(99, 102, 241, 0.22);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
-        }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 2rem;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+    }
 
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.8s ease-out;
-        }
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .nav-bar {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #fff, #9ca3af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+    }
 
-        .effective-date {
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+    .nav-link:hover {
+      color: var(--text);
+    }
 
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 2rem 0 1rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
+    .nav-link.active {
+      color: var(--primary);
+    }
 
-        h2::before {
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 1.25rem;
-            background: var(--primary);
-            margin-right: 12px;
-            border-radius: 2px;
-        }
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
 
-        p {
-            margin-bottom: 1rem;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
+    header {
+      margin-bottom: 2.5rem;
+    }
 
-        .contact-box {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: rgba(99, 102, 241, 0.05);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 16px;
-        }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.04em;
+    }
 
-        .contact-box h2 {
-            margin-top: 0;
-        }
+    .subtitle,
+    .updated,
+    p,
+    li {
+      color: var(--text-muted);
+    }
 
-        .email {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
+    .subtitle {
+      font-size: 1.05rem;
+      max-width: 760px;
+    }
 
-        .email:hover {
-            text-decoration: underline;
-            filter: brightness(1.2);
-        }
+    .updated {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
 
-        footer {
-            margin-top: 2rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
 
-        @media (max-width: 640px) {
-            .container {
-                padding: 2rem;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-        }
+    .highlight {
+      border-color: var(--accent-border);
+      background: rgba(99, 102, 241, 0.06);
+    }
 
-        .nav-bar {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-        }
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
 
-        .nav-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.2s;
-            position: relative;
-        }
+    p {
+      margin-bottom: 0.85rem;
+    }
 
-        .nav-link:hover {
-            color: var(--text);
-        }
+    p:last-child,
+    li:last-child {
+      margin-bottom: 0;
+    }
 
-        .nav-link.active {
-            color: var(--primary);
-        }
+    ul {
+      padding-left: 1.25rem;
+    }
 
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1rem;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary);
-            border-radius: 2px;
-        }
-    </style>
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        padding: 1.5rem;
+        border-radius: 18px;
+      }
+
+      .nav-bar {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      section {
+        padding: 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-bar">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="privacy.html" class="nav-link active">Privacy</a>
-        </nav>
-        <header>
-            <h1>Privacy Policy</h1>
-            <p class="effective-date">Effective date: May 6, 2026</p>
-        </header>
+  <main class="container">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="privacy.html" class="nav-link active">Privacy</a>
+      <a href="terms.html" class="nav-link">Terms</a>
+    </nav>
 
-        <section>
-            <p><strong>Tab Setu</strong> is a browser extension designed to help users manage and organize their browser tabs efficiently.</p>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Tab Setu helps you save, search, organize, and restore browser tabs while keeping your data local whenever possible.</p>
+      <p class="updated">Last updated: May 14, 2026</p>
+    </header>
 
-            <h2>Information We Access</h2>
-            <p>Tab Setu may access browser tab information such as tab titles, URLs, and window details only to provide its tab management features. This access is limited to the current session and is necessary for the core functionality of the extension.</p>
+    <section class="highlight">
+      <h2>Overview</h2>
+      <p>
+        Tab Setu is a browser extension for tab and session management. Its single purpose is to help users manage open tabs, saved sessions, notes, reminders, search, overlay access, and related tab productivity workflows.
+      </p>
+      <p>
+        Tab Setu does not sell user data, does not use user data for advertising, and does not share user data with third parties for unrelated purposes.
+      </p>
+    </section>
 
-            <h2>Information We Collect</h2>
-            <p>Tab Setu does not collect, sell, share, or transmit personal information to any external server. We believe your data belongs to you.</p>
+    <section>
+      <h2>Data Tab Setu may access or use</h2>
+      <p>Depending on which features you use, Tab Setu may access or store the following data:</p>
+      <ul>
+        <li><strong>Tab information:</strong> tab titles, URLs, favicons, active tab state, and browser window information used for tab search, switching, saving, restoring, and organizing sessions.</li>
+        <li><strong>Browser history:</strong> page titles, URLs, and visit-related information used only to provide history search and reopening of previously visited pages.</li>
+        <li><strong>Website content:</strong> page text may be accessed only when a feature such as page text extraction or AI prompt generation is used. This is used to generate user-requested context and is not used for advertising, tracking, or profiling.</li>
+        <li><strong>User-created content:</strong> saved sessions, folders, tags, notes, reminders, schedules, exported sessions, and extension preferences created by the user.</li>
+        <li><strong>Extension settings:</strong> theme choice, overlay state, search preferences, reminder settings, and other configuration needed to restore the user’s chosen experience.</li>
+      </ul>
+    </section>
 
-            <h2>Local Storage</h2>
-            <p>Any data saved by Tab Setu is stored locally in the user’s browser using browser storage APIs. This data remains on the user’s device unless the user removes the extension data or clears browser storage manually.</p>
+    <section>
+      <h2>How data is used</h2>
+      <p>Tab Setu uses data only to provide its core extension features, including:</p>
+      <ul>
+        <li>Displaying and searching open tabs.</li>
+        <li>Saving, restoring, organizing, importing, and exporting browser sessions.</li>
+        <li>Searching browser history when the user uses history search.</li>
+        <li>Showing the Tab Setu overlay on supported websites.</li>
+        <li>Saving user preferences such as theme, overlay state, and extension settings.</li>
+        <li>Supporting reminders, schedules, notes, and user-requested tab workflows.</li>
+        <li>Generating context-rich prompts from selected tabs or page text when the user chooses to use that feature.</li>
+      </ul>
+    </section>
 
-            <h2>Third-Party Sharing</h2>
-            <p>Tab Setu does not share user data with third parties. No data is ever sent to our servers or any third-party services.</p>
+    <section>
+      <h2>Local storage and retention</h2>
+      <p>
+        Tab Setu stores extension data locally in the browser using browser extension storage mechanisms. This may include saved sessions, notes, folders, tags, reminders, schedules, and user preferences.
+      </p>
+      <p>
+        Data remains stored until the user deletes it, clears browser extension data, resets extension storage, or uninstalls the extension.
+      </p>
+    </section>
 
-            <h2>Analytics and Advertising</h2>
-            <p>Tab Setu does not use analytics, tracking, or advertising services. We do not track your behavior or serve ads.</p>
+    <section>
+      <h2>Data sharing</h2>
+      <p>
+        Tab Setu does not sell, rent, or transfer user data to third parties for advertising, tracking, profiling, lending, creditworthiness, or unrelated purposes.
+      </p>
+      <p>
+        If the user manually exports a session, shares a session link, copies an AI prompt, or sends content to another application or service, the user controls what is shared and where it is sent.
+      </p>
+    </section>
 
-            <h2>Data Deletion</h2>
-            <p>Users can delete stored data at any time by clearing the extension’s storage, resetting the extension, or uninstalling Tab Setu from the browser.</p>
+    <section>
+      <h2>AI-related features</h2>
+      <p>
+        Tab Setu may help users generate prompts from selected tabs, saved sessions, or page text. Tab Setu does not automatically send page content, tab data, or history data to external AI providers. If a user copies, exports, or submits generated content to another service, that service’s own privacy practices apply.
+      </p>
+    </section>
 
-            <div class="contact-box">
-                <h2>Contact</h2>
-                <p>For support or privacy-related questions, contact us at:</p>
-                <a href="mailto:your-email@example.com" class="email">dineshdas1016@gmail.com</a>
-            </div>
-        </section>
-        
-        <footer>
-            &copy; 2026 Tab Setu. All rights reserved.
-        </footer>
-    </div>
+    <section>
+      <h2>Remote code</h2>
+      <p>
+        Tab Setu does not use remote code in the browser extension. JavaScript, CSS, and executable extension resources are included in the extension package.
+      </p>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <p>Tab Setu requests browser permissions only to support its tab management functionality:</p>
+      <ul>
+        <li><strong>tabs:</strong> to read and manage open tabs for search, switching, saving, and restoring sessions.</li>
+        <li><strong>storage:</strong> to save user preferences, sessions, notes, reminders, schedules, and extension settings.</li>
+        <li><strong>history:</strong> to let users search and reopen previously visited pages.</li>
+        <li><strong>scripting and activeTab:</strong> to show and manage the Tab Setu overlay on supported pages when the user uses the feature.</li>
+        <li><strong>host permissions:</strong> to allow the overlay/content script to run on supported websites where the extension is allowed to operate.</li>
+        <li><strong>alarms:</strong> to support reminders, schedules, and time-based tab workflows.</li>
+        <li><strong>notifications:</strong> to show user-facing reminders or relevant extension alerts.</li>
+        <li><strong>contextMenus:</strong> to provide quick access to Tab Setu actions from the browser right-click menu.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Restricted pages</h2>
+      <p>
+        Browser extensions cannot run on certain restricted pages, such as browser settings pages, extension store pages, and other protected browser URLs. Tab Setu respects these browser restrictions.
+      </p>
+    </section>
+
+    <section>
+      <h2>Children’s privacy</h2>
+      <p>
+        Tab Setu is not designed to knowingly collect personal information from children. The extension is intended for general tab and session management use.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>
+        This privacy policy may be updated if Tab Setu’s features, permissions, or data practices change. The updated version will be published on this page.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        For privacy questions about Tab Setu, contact <a href="mailto:dineshdas1016@gmail.com">dineshdas1016@gmail.com</a>.
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2026 Tab Setu. Free forever. No accounts. No cloud. No limits.
+    </footer>
+  </main>
 </body>
 </html>
