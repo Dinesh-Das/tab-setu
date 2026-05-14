@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - Tab Setu</title>
+  <title>Terms of Use - Tab Setu</title>
   <style>
     :root {
       --primary: #6366f1;
       --bg: #030712;
       --card-bg: rgba(17, 24, 39, 0.78);
+      --surface: rgba(255, 255, 255, 0.035);
       --text: #f3f4f6;
       --text-muted: #9ca3af;
       --border: rgba(255, 255, 255, 0.1);
-      --surface: rgba(255, 255, 255, 0.035);
+      --accent-border: rgba(99, 102, 241, 0.22);
     }
 
     * {
@@ -34,6 +35,7 @@
     }
 
     .container {
+      width: 100%;
       max-width: 960px;
       margin: 0 auto;
       background: var(--card-bg);
@@ -89,14 +91,20 @@
       letter-spacing: -0.04em;
     }
 
-    .subtitle {
+    .subtitle,
+    .updated,
+    p,
+    li {
       color: var(--text-muted);
+    }
+
+    .subtitle {
       font-size: 1.05rem;
+      max-width: 760px;
     }
 
     .updated {
       margin-top: 0.75rem;
-      color: var(--text-muted);
       font-size: 0.95rem;
     }
 
@@ -108,6 +116,11 @@
       margin-bottom: 1.25rem;
     }
 
+    .highlight {
+      border-color: var(--accent-border);
+      background: rgba(99, 102, 241, 0.06);
+    }
+
     h2 {
       font-size: 1.2rem;
       margin-bottom: 0.75rem;
@@ -115,13 +128,16 @@
     }
 
     p {
-      color: var(--text-muted);
       margin-bottom: 0.85rem;
+    }
+
+    p:last-child,
+    li:last-child {
+      margin-bottom: 0;
     }
 
     ul {
       padding-left: 1.25rem;
-      color: var(--text-muted);
     }
 
     li {
@@ -131,6 +147,15 @@
     strong {
       color: var(--text);
       font-weight: 600;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -154,6 +179,7 @@
 
       .nav-bar {
         gap: 1rem;
+        flex-wrap: wrap;
       }
 
       section {
@@ -166,117 +192,114 @@
   <main class="container">
     <nav class="nav-bar" aria-label="Main navigation">
       <a href="index.html" class="nav-link">Home</a>
-      <a href="privacy.html" class="nav-link active">Privacy</a>
+      <a href="privacy.html" class="nav-link">Privacy</a>
+      <a href="terms.html" class="nav-link active">Terms</a>
     </nav>
 
     <header>
-      <h1>Privacy Policy</h1>
-      <p class="subtitle">Tab Setu is designed to help you save, search, organize, and restore browser tabs while keeping your data local whenever possible.</p>
+      <h1>Terms of Use</h1>
+      <p class="subtitle">These terms explain the rules for using the Tab Setu browser extension and related project pages.</p>
       <p class="updated">Last updated: May 14, 2026</p>
     </header>
 
-    <section>
-      <h2>Overview</h2>
+    <section class="highlight">
+      <h2>Acceptance of terms</h2>
       <p>
-        Tab Setu is a browser extension for tab and session management. Its purpose is to help users manage open tabs, saved sessions, reminders, notes, search, and related tab productivity workflows.
-      </p>
-      <p>
-        Tab Setu does not sell user data, does not use user data for advertising, and does not share user data with third parties for unrelated purposes.
+        By installing or using Tab Setu, you agree to these Terms of Use. If you do not agree with these terms, do not use the extension.
       </p>
     </section>
 
     <section>
-      <h2>Data Tab Setu may access or use</h2>
-      <p>Depending on which features you use, Tab Setu may access or store the following data:</p>
+      <h2>About Tab Setu</h2>
+      <p>
+        Tab Setu is a browser extension designed to help users save, organize, search, restore, and manage browser tabs and sessions. It may also provide features such as notes, reminders, schedules, overlay access, exports, imports, history search, and user-requested prompt generation.
+      </p>
+    </section>
+
+    <section>
+      <h2>Permitted use</h2>
+      <p>You may use Tab Setu for personal or professional tab and session management. You agree not to use Tab Setu to:</p>
       <ul>
-        <li><strong>Tab information:</strong> tab titles, URLs, favicons, active tab state, and browser window information used for tab search, switching, saving, restoring, and organizing sessions.</li>
-        <li><strong>Browser history:</strong> page titles, URLs, and visit-related information used only to provide history search and reopening of previously visited pages.</li>
-        <li><strong>Website content:</strong> page text may be accessed only when a feature such as page text extraction or AI prompt generation is used. This is used to generate user-requested context and is not used for advertising or tracking.</li>
-        <li><strong>User-created content:</strong> saved sessions, folders, tags, notes, reminders, schedules, and extension preferences created by the user.</li>
-        <li><strong>Extension settings:</strong> theme choice, overlay state, search preferences, and other configuration needed to restore the user’s chosen experience.</li>
+        <li>Violate applicable laws, regulations, or third-party rights.</li>
+        <li>Attempt to reverse engineer, abuse, disrupt, or interfere with the extension or browser platform.</li>
+        <li>Use exported or shared session data in a way that exposes private or sensitive information without permission.</li>
+        <li>Misrepresent Tab Setu, its features, or its relationship with any browser vendor or third-party service.</li>
       </ul>
     </section>
 
     <section>
-      <h2>How data is used</h2>
-      <p>Tab Setu uses data only to provide its core tab management features, including:</p>
-      <ul>
-        <li>Displaying and searching open tabs.</li>
-        <li>Saving, restoring, organizing, and exporting browser sessions.</li>
-        <li>Searching browser history when the user uses history search.</li>
-        <li>Showing the Tab Setu overlay on supported websites.</li>
-        <li>Saving user preferences such as theme, overlay state, and extension settings.</li>
-        <li>Supporting reminders, schedules, notes, and user-requested tab workflows.</li>
-        <li>Generating context-rich prompts from selected tabs or page text when the user uses that feature.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Local storage and retention</h2>
+      <h2>Your data and responsibility</h2>
       <p>
-        Tab Setu stores extension data locally in the browser using browser extension storage mechanisms. This may include saved sessions, notes, tags, reminders, schedules, and user preferences.
+        Tab Setu is designed to store extension data locally in the browser. You are responsible for managing your saved sessions, notes, exports, shared links, prompts, and any content you choose to copy, import, export, or share.
       </p>
       <p>
-        Data remains stored until the user deletes it, clears browser extension data, or uninstalls the extension.
+        Be careful when exporting sessions or sharing generated prompts, because they may include page titles, URLs, notes, or page text selected by you.
       </p>
     </section>
 
     <section>
-      <h2>Data sharing</h2>
+      <h2>AI prompt and page text features</h2>
       <p>
-        Tab Setu does not sell, rent, or transfer user data to third parties for advertising, tracking, profiling, lending, creditworthiness, or unrelated purposes.
+        Tab Setu may help generate prompts or context from selected tabs, saved sessions, or page text. These features are provided for user convenience. You are responsible for reviewing any generated content before using it with third-party services.
       </p>
       <p>
-        If the user manually exports or shares a saved session, the user controls what is shared and where it is sent.
-      </p>
-    </section>
-
-    <section>
-      <h2>Remote code</h2>
-      <p>
-        Tab Setu does not use remote code in the browser extension. JavaScript, CSS, and executable extension resources are included in the extension package.
+        Tab Setu does not control third-party AI tools, websites, or services. If you submit content to another service, that service’s own terms and privacy practices apply.
       </p>
     </section>
 
     <section>
-      <h2>Permissions</h2>
-      <p>Tab Setu requests browser permissions only to support its tab management functionality:</p>
-      <ul>
-        <li><strong>tabs:</strong> to read and manage open tabs for search, switching, saving, and restoring sessions.</li>
-        <li><strong>storage:</strong> to save user preferences, sessions, notes, reminders, and extension settings.</li>
-        <li><strong>history:</strong> to let users search and reopen previously visited pages.</li>
-        <li><strong>scripting and activeTab:</strong> to show and manage the Tab Setu overlay on supported pages when the user uses the feature.</li>
-        <li><strong>alarms:</strong> to support reminders, schedules, and time-based tab workflows.</li>
-        <li><strong>notifications:</strong> to show user-facing reminders or relevant extension alerts.</li>
-        <li><strong>contextMenus:</strong> to provide quick access to Tab Setu actions from the browser right-click menu.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Restricted pages</h2>
+      <h2>Third-party websites and services</h2>
       <p>
-        Browser extensions cannot run on certain restricted pages, such as browser settings pages, extension store pages, and other protected browser URLs. Tab Setu respects these browser restrictions.
+        Tab Setu may help you open, save, search, or organize links to third-party websites. Tab Setu is not responsible for the content, availability, security, or policies of third-party websites or services.
       </p>
     </section>
 
     <section>
-      <h2>Children’s privacy</h2>
+      <h2>No account or cloud service</h2>
       <p>
-        Tab Setu is not designed to knowingly collect personal information from children. The extension is intended for general tab and session management use.
+        Tab Setu is intended to work without accounts or cloud storage. Extension data is generally stored locally in your browser unless you manually export, share, copy, or send it elsewhere.
       </p>
     </section>
 
     <section>
-      <h2>Changes to this policy</h2>
+      <h2>Availability and changes</h2>
       <p>
-        This privacy policy may be updated if Tab Setu’s features, permissions, or data practices change. The updated version will be published on this page.
+        Tab Setu may be updated, changed, suspended, or discontinued at any time. Features may change over time as the extension is improved or as browser platform requirements change.
+      </p>
+    </section>
+
+    <section>
+      <h2>No warranties</h2>
+      <p>
+        Tab Setu is provided on an “as is” and “as available” basis. We do not guarantee that the extension will be error-free, uninterrupted, or compatible with every website, browser version, or browser-restricted page.
+      </p>
+    </section>
+
+    <section>
+      <h2>Limitation of liability</h2>
+      <p>
+        To the maximum extent permitted by applicable law, Tab Setu and its developer are not liable for indirect, incidental, special, consequential, or punitive damages, or for loss of data, lost productivity, or issues caused by browser restrictions, third-party websites, or user-managed exports and sharing.
+      </p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>
+        Your use of Tab Setu is also governed by the <a href="privacy.html">Privacy Policy</a>, which explains what data the extension may access and how it is used.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes to these terms</h2>
+      <p>
+        These Terms of Use may be updated from time to time. The updated version will be published on this page with a revised “Last updated” date.
       </p>
     </section>
 
     <section>
       <h2>Contact</h2>
       <p>
-        For privacy questions about Tab Setu, use the contact information provided on the extension listing or the project repository.
+        For questions about these terms, contact <a href="mailto:dineshdas1016@gmail.com">dineshdas1016@gmail.com</a>.
       </p>
     </section>
 
