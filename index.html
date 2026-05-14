@@ -1,311 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tab Setu - Save your tabs. Clear your mind.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #6366f1;
-            --primary-glow: rgba(99, 102, 241, 0.5);
-            --bg: #030712;
-            --card-bg: rgba(17, 24, 39, 0.7);
-            --text: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border: rgba(255, 255, 255, 0.1);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Tab Setu</title>
+  <style>
+    :root {
+      --primary: #6366f1;
+      --bg: #030712;
+      --card-bg: rgba(17, 24, 39, 0.78);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border: rgba(255, 255, 255, 0.1);
+      --surface: rgba(255, 255, 255, 0.035);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
-        }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 2rem;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+    }
 
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.8s ease-out;
-        }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .nav-bar {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
 
-        .nav-bar {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-        }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+    }
 
-        .nav-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.2s;
-            position: relative;
-        }
+    .nav-link:hover {
+      color: var(--text);
+    }
 
-        .nav-link:hover {
-            color: var(--text);
-        }
+    .nav-link.active {
+      color: var(--primary);
+    }
 
-        .nav-link.active {
-            color: var(--primary);
-        }
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
 
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1rem;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary);
-            border-radius: 2px;
-        }
+    header {
+      margin-bottom: 2.5rem;
+    }
 
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.04em;
+    }
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #fff, #9ca3af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
 
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-        }
+    .updated {
+      margin-top: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
 
-        .feature-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
-            border-color: rgba(99, 102, 241, 0.5);
-            background: rgba(255, 255, 255, 0.05);
-        }
+    p {
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
 
-        .icon-wrapper {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: rgba(99, 102, 241, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
+    ul {
+      padding-left: 1.25rem;
+      color: var(--text-muted);
+    }
 
-        .icon-wrapper svg {
-            width: 24px;
-            height: 24px;
-        }
+    li {
+      margin-bottom: 0.5rem;
+    }
 
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
 
-        p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        
-        .feature-list {
-            margin-top: 1rem;
-            list-style: none;
-        }
-        
-        .feature-list li {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .feature-list li::before {
-            content: "•";
-            color: var(--primary);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
+    footer {
+      margin-top: 2.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
 
-        footer {
-            margin-top: 4rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            border-top: 1px solid var(--border);
-            padding-top: 2rem;
-        }
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem;
+      }
 
-        @media (max-width: 640px) {
-            .container {
-                padding: 2rem;
-            }
-            h1 {
-                font-size: 2.5rem;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+      .container {
+        padding: 1.5rem;
+        border-radius: 18px;
+      }
+
+      .nav-bar {
+        gap: 1rem;
+      }
+
+      section {
+        padding: 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-bar">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="privacy.html" class="nav-link">Privacy</a>
-        </nav>
-        
-        <header>
-            <h1>Everything you need.</h1>
-            <p class="subtitle">Save, organize, and restore browser sessions with TabSetu.</p>
-        </header>
+  <main class="container">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="privacy.html" class="nav-link active">Privacy</a>
+    </nav>
 
-        <div class="features-grid">
-            <!-- Session Management -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                </div>
-                <h2>Session Management</h2>
-                <p>One-click save to snapshot your entire window in milliseconds, or smart collapse with a 10-second undo buffer.</p>
-                <ul class="feature-list">
-                    <li>Folders & Tags</li>
-                    <li>Bulk actions (Archive, Move, Delete)</li>
-                    <li>Drag-and-drop tab reordering</li>
-                </ul>
-            </div>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Tab Setu is designed to help you save, search, organize, and restore browser tabs while keeping your data local whenever possible.</p>
+      <p class="updated">Last updated: May 14, 2026</p>
+    </header>
 
-            <!-- Notes -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V8.5L15.5 3Z"/><path d="M15 3v6h6"/></svg>
-                </div>
-                <h2>Integrated Notes</h2>
-                <p>Keep your thoughts organized exactly where you need them. Attach context to your research effortlessly.</p>
-                <ul class="feature-list">
-                    <li>Tab-specific notes</li>
-                    <li>Rich session notes</li>
-                    <li>Standalone research logs</li>
-                </ul>
-            </div>
+    <section>
+      <h2>Overview</h2>
+      <p>
+        Tab Setu is a browser extension for tab and session management. Its purpose is to help users manage open tabs, saved sessions, reminders, notes, search, and related tab productivity workflows.
+      </p>
+      <p>
+        Tab Setu does not sell user data, does not use user data for advertising, and does not share user data with third parties for unrelated purposes.
+      </p>
+    </section>
 
-            <!-- Reminders & Schedules -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <h2>Reminders & Schedules</h2>
-                <p>Never lose track of important tabs. Set reminders for specific times and build recurring automated workflows.</p>
-                <ul class="feature-list">
-                    <li>Snooze / Dismiss / Reopen</li>
-                    <li>Recurring schedules (Daily, Weekdays)</li>
-                    <li>One-time scheduled opening</li>
-                </ul>
-            </div>
+    <section>
+      <h2>Data Tab Setu may access or use</h2>
+      <p>Depending on which features you use, Tab Setu may access or store the following data:</p>
+      <ul>
+        <li><strong>Tab information:</strong> tab titles, URLs, favicons, active tab state, and browser window information used for tab search, switching, saving, restoring, and organizing sessions.</li>
+        <li><strong>Browser history:</strong> page titles, URLs, and visit-related information used only to provide history search and reopening of previously visited pages.</li>
+        <li><strong>Website content:</strong> page text may be accessed only when a feature such as page text extraction or AI prompt generation is used. This is used to generate user-requested context and is not used for advertising or tracking.</li>
+        <li><strong>User-created content:</strong> saved sessions, folders, tags, notes, reminders, schedules, and extension preferences created by the user.</li>
+        <li><strong>Extension settings:</strong> theme choice, overlay state, search preferences, and other configuration needed to restore the user’s chosen experience.</li>
+      </ul>
+    </section>
 
-            <!-- Search -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                </div>
-                <h2>Global Search</h2>
-                <p>Press Ctrl+Shift+F on any webpage to search your entire TabSetu history without leaving your current context.</p>
-                <ul class="feature-list">
-                    <li>Fuzzy matching (Fuse.js)</li>
-                    <li>Highlighted inline snippets</li>
-                    <li>Keyboard-first navigation</li>
-                </ul>
-            </div>
+    <section>
+      <h2>How data is used</h2>
+      <p>Tab Setu uses data only to provide its core tab management features, including:</p>
+      <ul>
+        <li>Displaying and searching open tabs.</li>
+        <li>Saving, restoring, organizing, and exporting browser sessions.</li>
+        <li>Searching browser history when the user uses history search.</li>
+        <li>Showing the Tab Setu overlay on supported websites.</li>
+        <li>Saving user preferences such as theme, overlay state, and extension settings.</li>
+        <li>Supporting reminders, schedules, notes, and user-requested tab workflows.</li>
+        <li>Generating context-rich prompts from selected tabs or page text when the user uses that feature.</li>
+      </ul>
+    </section>
 
-            <!-- AI Integration -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-                </div>
-                <h2>AI Ready</h2>
-                <p>Seamlessly bridge your saved research with powerful AI tools by generating context-rich prompts from your tabs.</p>
-                <ul class="feature-list">
-                    <li>ChatGPT, Claude, & Gemini prompts</li>
-                    <li>Page text extraction</li>
-                    <li>Custom AI providers & templates</li>
-                </ul>
-            </div>
+    <section>
+      <h2>Local storage and retention</h2>
+      <p>
+        Tab Setu stores extension data locally in the browser using browser extension storage mechanisms. This may include saved sessions, notes, tags, reminders, schedules, and user preferences.
+      </p>
+      <p>
+        Data remains stored until the user deletes it, clears browser extension data, or uninstalls the extension.
+      </p>
+    </section>
 
-            <!-- Sharing -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
-                </div>
-                <h2>Universal Sharing</h2>
-                <p>Export your sessions and share them instantly with URL-encoded links that anyone can import.</p>
-                <ul class="feature-list">
-                    <li>Shareable session links</li>
-                    <li>JSON, Markdown & Plain Text exports</li>
-                    <li>Import from other tab managers</li>
-                </ul>
-            </div>
-        </div>
-        
-        <footer>
-            &copy; 2026 Tab Setu. Free forever. No accounts. No cloud. No limits.
-        </footer>
-    </div>
+    <section>
+      <h2>Data sharing</h2>
+      <p>
+        Tab Setu does not sell, rent, or transfer user data to third parties for advertising, tracking, profiling, lending, creditworthiness, or unrelated purposes.
+      </p>
+      <p>
+        If the user manually exports or shares a saved session, the user controls what is shared and where it is sent.
+      </p>
+    </section>
+
+    <section>
+      <h2>Remote code</h2>
+      <p>
+        Tab Setu does not use remote code in the browser extension. JavaScript, CSS, and executable extension resources are included in the extension package.
+      </p>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <p>Tab Setu requests browser permissions only to support its tab management functionality:</p>
+      <ul>
+        <li><strong>tabs:</strong> to read and manage open tabs for search, switching, saving, and restoring sessions.</li>
+        <li><strong>storage:</strong> to save user preferences, sessions, notes, reminders, and extension settings.</li>
+        <li><strong>history:</strong> to let users search and reopen previously visited pages.</li>
+        <li><strong>scripting and activeTab:</strong> to show and manage the Tab Setu overlay on supported pages when the user uses the feature.</li>
+        <li><strong>alarms:</strong> to support reminders, schedules, and time-based tab workflows.</li>
+        <li><strong>notifications:</strong> to show user-facing reminders or relevant extension alerts.</li>
+        <li><strong>contextMenus:</strong> to provide quick access to Tab Setu actions from the browser right-click menu.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Restricted pages</h2>
+      <p>
+        Browser extensions cannot run on certain restricted pages, such as browser settings pages, extension store pages, and other protected browser URLs. Tab Setu respects these browser restrictions.
+      </p>
+    </section>
+
+    <section>
+      <h2>Children’s privacy</h2>
+      <p>
+        Tab Setu is not designed to knowingly collect personal information from children. The extension is intended for general tab and session management use.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>
+        This privacy policy may be updated if Tab Setu’s features, permissions, or data practices change. The updated version will be published on this page.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        For privacy questions about Tab Setu, use the contact information provided on the extension listing or the project repository.
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2026 Tab Setu. Free forever. No accounts. No cloud. No limits.
+    </footer>
+  </main>
 </body>
 </html>
